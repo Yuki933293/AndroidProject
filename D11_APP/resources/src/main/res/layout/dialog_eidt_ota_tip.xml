@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="256dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ic_dialog_background"
+    android:gravity="center_horizontal"
+    android:paddingBottom="10dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="46dp"
+        android:gravity="center"
+        android:text="@string/modify_remote_address"
+        android:textColor="@color/color_device_title"
+        android:textSize="@dimen/font_size_18" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/address_edit"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="20dp"
+        android:singleLine="true"
+        android:background="@drawable/ota_address_bg"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_confirm"
+            android:layout_width="84dp"
+            android:layout_height="32dp"
+            android:background="@drawable/selector_btn_confirm"
+            android:gravity="center"
+            android:text="@string/modify"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_14" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_cancel"
+            android:layout_width="84dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="38dp"
+            android:background="@drawable/selector_btn_confirm"
+            android:gravity="center"
+            android:text="@string/concel"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_14" />
+    </LinearLayout>
+
+</LinearLayout>

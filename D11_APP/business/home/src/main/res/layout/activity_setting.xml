@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+    <com.luxshare.base.view.LuxTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue_bar_bg"
+        app:title="@string/setting"
+        tools:ignore="MissingConstraints"
+        />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFE1ECFF"
+        android:layout_below="@+id/title_bar"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="20dp">
+
+            <include layout="@layout/layout_device_info" />
+
+            <com.luxshare.home.view.CommandItemView
+                android:id="@+id/civ_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="@string/tag_sound_location"
+                app:itemTitle="@string/sound_location"
+                app:itemType="type_multy"
+                app:item_bgType="top"
+                app:tip="@string/speaker_circular_light_sound_localization_cue"
+                app:tipVisible="visible" />
+
+            <com.luxshare.home.view.CommandItemView
+                android:id="@+id/civ_reconnect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="@string/tag_reconnect"
+                app:itemTitle="@string/automatic_reconnection"
+                app:itemType="type_switch"
+                app:tip="@string/automatically_reconnect_to_paired_devices"
+                app:tipVisible="visible"
+                android:visibility="gone"/>
+
+            <com.luxshare.home.view.CommandItemView
+                android:id="@+id/civ_voice_reminder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="@string/tag_remind"
+                app:itemTitle="@string/voice_reminder"
+                app:itemType="type_multy"
+                app:item_bgType="bottom"
+                android:visibility="gone"/>
+
+            <com.luxshare.home.view.CommandItemView
+                android:id="@+id/civ_voice_reminder_language"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="@string/tag_language"
+                app:itemTitle="@string/voice_reminder_language"
+                app:describe_size="16sp"
+                app:itemType="type_multy"
+                app:item_bgType="middle"
+                app:tipVisible="visible"/>
+
+            <com.luxshare.home.view.CommandItemView
+                android:id="@+id/civ_auto_off"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="@string/tag_lauto_off"
+                app:itemTitle="@string/automatic_shutdown"
+                app:describe_size="16sp"
+                app:itemType="type_multy"
+                app:tipVisible="visible" />
+
+            <!--<com.luxshare.home.view.CommandItemView
+                android:id="@+id/civ_find_my"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="@string/tag_find_my"
+                app:describe="@string/temporarily_unavailable"
+                app:itemTitle="@string/find_myself"
+                app:itemType="type_text"
+                app:item_bgType="bottom" />-->
+            <include layout="@layout/layout_item_findmy" />
+
+            <com.luxshare.home.view.CommandItemView
+                android:id="@+id/civ_meeting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="@string/tag_light_strip_setting"
+                app:itemTitle="@string/meeting_minutes"
+                app:itemType="type_multy"
+                app:item_bgType="top"
+                app:tipVisible="visible"
+                />
+
+            <com.luxshare.home.view.CommandItemView
+                android:id="@+id/civ_light_strip_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="@string/tag_light_strip_setting"
+                app:describe="@string/temporarily_unavailable"
+                app:itemTitle="@string/circular_light_strip_setting"
+                app:itemType="type_text"
+                android:visibility="gone"
+                />
+
+            <com.luxshare.home.view.CommandItemView
+                android:id="@+id/civ_music_mode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="@string/tag_music_mode"
+                app:tip="@string/meeting_mode"
+                app:itemTitle="@string/music_meeting_mode"
+                app:describe_size="16sp"
+                app:itemType="type_multy"
+                app:tipVisible="visible"
+                android:visibility="gone"/>
+
+            <com.luxshare.home.view.CommandItemView
+                android:id="@+id/civ_distribution_net"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="@string/tag_distribution_network"
+                app:itemTitle="@string/distribution_network"
+                app:describe_size="16sp"
+                app:itemType="type_multy"
+                app:tipVisible="visible"/>
+
+            <com.luxshare.home.view.CommandItemView
+                android:id="@+id/civ_notifications_and_prompts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="@string/tag_notifications_prompt"
+                app:describe="@string/temporarily_unavailable"
+                app:itemTitle="@string/manage_notifications_and_prompts"
+                app:itemType="type_text"
+                android:visibility="gone"/>
+
+            <com.luxshare.home.view.CommandItemView
+                android:id="@+id/civ_update_firmware"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="@string/tag_update_firmware"
+                app:describe="@string/temporarily_unavailable"
+                app:itemTitle="@string/update_device_firmware"
+                app:itemType="type_text"
+                android:visibility="gone"/>
+
+            <com.luxshare.home.view.CommandItemView
+                android:id="@+id/civ_bluetooth_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="@string/tag_bluetooth_list"
+                app:describe="@string/temporarily_unavailable"
+                app:itemTitle="@string/bluetooth_list_management"
+                app:itemType="type_text"
+                app:describe_size="16sp"
+                app:describe_color="@color/green"
+                />
+
+            <com.luxshare.home.view.CommandItemView
+                android:id="@+id/civ_clear_paired_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="@string/tag_clear_list"
+                app:describe="@string/clear_pairing_information_with_one_tap"
+                app:describe_color="@color/blue_font_clear"
+                app:describe_size="@dimen/font_size_12"
+                app:itemTitle="@string/clear_bluetooth_list"
+                app:itemType="type_text"
+                />
+
+            <com.luxshare.home.view.CommandItemView
+                android:id="@+id/civ_factory_reset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="@string/tag_factory_reset"
+                app:itemTitle="@string/factory_reset"
+                app:itemType="type_mono"
+                app:item_bgType="top"/>
+
+            <com.luxshare.home.view.CommandItemView
+                android:id="@+id/civ_disconnect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="@string/tag_factory_reset"
+                app:itemTitle="@string/disconnect"
+                app:itemType="type_mono"  />
+
+            <com.luxshare.home.view.CommandItemView
+                android:id="@+id/civ_ota_update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="@string/tag_ota_update"
+                app:itemTitle="@string/ota_update"
+                app:itemType="type_multy"
+                app:describe_size="16sp"
+                app:tipVisible="visible"
+                />
+
+            <com.luxshare.home.view.CommandItemView
+                android:id="@+id/civ_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="@string/tag_speaker_information"
+                app:describe="@string/temporarily_unavailable"
+                app:itemTitle="@string/speaker_information"
+                app:itemType="type_text"
+                app:item_bgType="bottom"
+                app:describe_size="16sp"
+                app:describe_color="@color/green"
+                />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <TextView
+        android:id="@+id/toast_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/font_size_12"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:padding="10dp"
+        android:textColor="#333"
+        android:background="@drawable/toast_item_bg"
+        android:visibility="gone"
+        />
+</RelativeLayout>

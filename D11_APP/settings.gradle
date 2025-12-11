@@ -1,0 +1,34 @@
+pluginManagement {
+    repositories {
+        mavenCentral()
+        gradlePluginPortal()
+        google()
+        jcenter()
+        maven {
+            url uri('/arouter/repo')
+        }
+        maven { url 'https://jitpack.io' }
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        mavenCentral()
+        google()
+        jcenter()
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+include ':app'
+include ':home'
+include ':arouter:arouter-api'
+include ':arouter:arouter-compiler'
+include ':arouter:arouter-annotation'
+include ':arouter:arouter-gradle-plugin'
+include ':business:configs'
+include ':business:home'
+include ':function:base'
+include ':function:ble'
+include ':resources'
+include ':fastsp'

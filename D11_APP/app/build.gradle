@@ -1,0 +1,93 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+//    id 'com.alibaba.arouter'
+}
+
+static def releaseTime() {
+    return new Date().format("yyyyMMddHHmm", TimeZone.getTimeZone("GMT+8"))
+}
+
+android {
+    compileSdk rootProject.android.compileSdkVersion
+
+    defaultConfig {
+        applicationId rootProject.appId["app"]
+        minSdk rootProject.android.minSdkVersion
+        targetSdk rootProject.android.targetSdkVersion
+        versionCode rootProject.android.versionCode
+        versionName rootProject.android.versionName
+
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+        ndk {
+            // 设置支持的SO库架构
+            abiFilters 'armeabi' ,'arm64-v8a'//, 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+        }
+    }
+
+    signingConfigs {
+        release {
+            storeFile file('../platformjks/shared.keystore')//这里是你的jks文件路径
+            keyPassword 'password2'
+            keyAlias 'androidentry'
+            storePassword 'password2'
+        }
+
+        debug {
+            storeFile file('../platformjks/shared.keystore')//这里是你的jks文件路径
+            keyPassword 'password2'
+            keyAlias 'androidentry'
+            storePassword 'password2'
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            signingConfig signingConfigs.debug
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    //这里修改apk文件名
+    android.applicationVariants.all {
+        variant ->
+            variant.outputs.all {
+                if ("release".contains(variant.name)) {
+                    outputFileName = "D11_${variant.name}_v${variant.versionName}_" +
+                            "${releaseTime()}.apk"
+                } else {
+                    outputFileName = "D11_${variant.name}_v${variant.versionName}.apk"
+                }
+            }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        viewBinding true
+    }
+    buildFeatures {
+        dataBinding true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(path: ':function:base')
+    implementation project(path: ':business:home')
+    implementation project(path: ':business:configs')
+}

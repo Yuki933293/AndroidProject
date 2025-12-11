@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:background="@drawable/commandview_item_bg_bottom">
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:maxLines="1"
+        android:text="@string/find_myself"
+        android:textColor="@color/black_item_title"
+        android:textSize="@dimen/font_size_18" />
+
+    <TextView
+        android:id="@+id/tv_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="17dp"
+        android:layout_toRightOf="@id/title"
+        android:maxLines="1"
+        android:text="@string/find_my_tip"
+        android:textColor="@color/black_item_tip"
+        android:textSize="@dimen/font_size_14" />
+
+    <ImageButton
+        android:id="@+id/play_state_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="20dp"
+        android:background="@null"
+        android:src="@drawable/ic_music_play"
+        android:tag="@string/audio_play" />
+</RelativeLayout>

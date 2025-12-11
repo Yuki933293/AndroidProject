@@ -1,0 +1,79 @@
+//根据isLibrary变量动态的切换 集成/组件模式
+if (isLibrary) {
+    apply plugin: 'com.android.library'
+} else {
+    apply plugin: 'com.android.application'
+}
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'org.jetbrains.kotlin.android'
+
+android {
+    compileSdk rootProject.android.compileSdkVersion
+
+    defaultConfig {
+        if (isLibrary) {
+            buildConfigField 'boolean', 'ISLIBRARY', 'true' // 在BuildConfig中添加ISLIBRARY变量
+        } else {
+            applicationId rootProject.appId["home"]
+            buildConfigField 'boolean', 'ISLIBRARY', 'false'
+        }
+        minSdk rootProject.android.minSdkVersion
+        targetSdk rootProject.android.targetSdkVersion
+        versionCode rootProject.android.versionCode
+        versionName rootProject.android.versionName
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        viewBinding true
+    }
+
+    buildFeatures {
+        dataBinding true
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    //资源配置
+    sourceSets {
+        main {
+            if (isLibrary) {
+                // 在集成模式下，使用的manifest文件
+                manifest.srcFile 'src/main/library/AndroidManifest.xml'
+            } else {
+                // 在组件模式下，使用的manifest文件
+                manifest.srcFile 'src/main/AndroidManifest.xml'
+                // 在组件模式下，使用的多个java路径
+                java.srcDirs 'src/main/library/java', 'src/main/java'
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(path: ':function:base')
+    implementation project(path: ':function:ble')
+    implementation 'com.tencent.bugly:crashreport:latest.release'
+    annotationProcessor project(path: ':arouter:arouter-compiler')
+    kapt project(path: ':arouter:arouter-compiler')
+
+    implementation "io.noties.markwon:core:4.6.2"
+}

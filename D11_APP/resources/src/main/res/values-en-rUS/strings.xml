@@ -1,0 +1,156 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+     <string name="app_name">Luxshare Conference Speaker</string>
+     <string name="connected_devices" tools:ignore="ExtraTranslation">Device Connection</string>
+     <string name="setting" tools:ignore="ExtraTranslation">Setting</string>
+     <string name="voice_reminder_language" tools:ignore="ExtraTranslation">Voice reminder language</string>
+     <string name="chinese" tools:ignore="ExtraTranslation">Chinese</string>
+     <string name="english" tools:ignore="ExtraTranslation">English</string>
+     <string name="automatic_shutdown" tools:ignore="ExtraTranslation">Automatic shutdown</string>
+     <string name="temporarily_unavailable">Unavailable</string>
+     <string name="circular_light_strip_setting">Ring light strip settings</string>
+     <string name="music_meeting_mode">Music/Meeting Mode</string>
+     <string name="music_mode">Music Mode</string>
+     <string name="meeting_mode">Meeting Mode</string>
+     <string name="manage_notifications_and_prompts">Manage notifications and alerts</string>
+     <string name="update_device_firmware">Update device firmware</string>
+     <string name="speaker_information">Speaker information</string>
+     <string name="bluetooth_list_management">Bluetooth List Management</string>
+     <string name="ota_update">OTA</string>
+     <string name="find_myself">Find My</string>
+     <string name="clear_bluetooth_list">Clear Bluetooth list</string>
+     <string name="clear_pairing_information_with_one_tap">Clear pairing information</string>
+     <string name="sound_location">Voice Localization</string>
+     <string name="speaker_circular_light_sound_localization_cue">Ring light voice positioning prompt</string>
+     <string name="automatic_reconnection">Automatic reconnection</string>
+     <string name="automatically_reconnect_to_paired_devices">Automatically reconnect to paired devices</string>
+     <string name="voice_reminder">Voice reminder</string>
+     <string name="factory_reset">Factory Reset</string>
+     <!--TAG STAT-->
+     <string name="tag_sound_location">sound_location</string>
+     <string name="tag_reconnect">reconnect</string>
+     <string name="tag_remind">remind</string>
+     <string name="tag_language">language</string>
+     <string name="tag_lauto_off">auto_off</string>
+     <string name="tag_clear_list">clear_list</string>
+     <string name="tag_factory_reset">factory_reset</string>
+     <string name="tag_light_strip_setting">light_strip_setting</string>
+     <string name="tag_music_mode">music_mode</string>
+     <string name="tag_notifications_prompt">notifications_prompt</string>
+     <string name="tag_distribution_network">distribution_network</string>
+     <string name="tag_update_firmware">update_firmware</string>
+     <string name="tag_bluetooth_list">update_bluetooth_list</string>
+     <string name="tag_ota_update">ota_update</string>
+     <string name="tag_find_my">find_my</string>
+     <string name="tag_speaker_information">speaker_information</string>
+     <string name="connect_fail_tip">Connection failed\nPlease refresh the device list and try again</string>
+     <string name="factory_reset_tip">The speaker will be restored to factory settings\nRe-pairing and connection is required</string>
+     <string name="disconnect_reconnect_tip">The connection has been disconnected\nPlease reconnect</string>
+     <string name="disconnect_warning">Disconnected</string>
+     <string name="clear_pair_tip">After clearing, you need to re-pair and connect</string>
+     <string name="off_time_ten">10 minutes later</string>
+     <string name="off_time_thirty">30 minutes later</string>
+     <string name="off_time_sixty">60 minutes later</string>
+     <string name="off_time_on">Not shutting down</string>
+     <string name="disconnect">Disconnect</string>
+     <string name="distribution_network">One-click network configuration</string>
+     <string name="disconnect_tip">The speaker will disconnect from the phone</string>
+     <string name="find_my_tip">Play sound,find speaker</string>
+     <string name="searching">Searching devices…</string>
+     <string name="search_device_no">No device found, please refresh and try again</string>
+     <string name="audio_play">play</string>
+     <string name="audio_stop">stop</string>
+
+     <!--TAG END-->
+     <string-array name="device_language">
+          <item>Chinese</item>
+          <item>English</item>
+     </string-array>
+     <string-array name="off_time_key">
+          <item>time_ten</item>
+          <item>time_thirty</item>
+          <item>time_sixty</item>
+          <item>time_on</item>
+     </string-array>
+     <string-array name="off_time_value">
+          <item>10 minutes later</item>
+          <item>30 minutes later</item>
+          <item>60 minutes later</item>
+          <item>Not shutting down</item>
+     </string-array>
+     <string name="shutdown_conditions">If there is no operation between the Bluetooth device and the speaker for a certain period of time while only establishing a Bluetooth connection, the speaker will automatically shut down</string>
+     <string name="input_wifi_name">WIFI name</string>
+     <string name="password">Password:</string>
+     <string name="wifi">WIFI:</string>
+     <string name="input_wifi_password">WIFI password</string>
+
+     <string name="delete">Delete</string>
+     <string name="share">Share</string>
+     <string name="meeting_minutes">Meeting Minutes</string>
+     <string name="meeting_minutes_list">Meeting minutes list</string>
+     <string name="synchronizing_meeting">Synchronizing all meeting minutes from speakers…</string>
+     <string name="synchronizing_meeting_fail">Synchronization failed, please refresh and try again</string>
+     <string name="no_meeting_minutes">No file has been generated yet. Go to the meeting now.</string>
+     <string name="file_details">File Details</string>
+     <string name="file_size">File size</string>
+     <string name="save_time">Save time</string>
+     <string name="file_path">File Path</string>
+
+     <string name="file_not_exist_tip">The file does not exist and may have been deleted. Please retrieve it again.</string>
+
+     <string name="delete_tip">Synchronize the deletion of files saved in the speaker and phone</string>
+     <string name="confirm">Confirm</string>
+     <string name="concel">Cancel</string>
+
+     <string name="connect_net_tip">Account password cannot be empty</string>
+     <string name="start_scan">Start Scan</string>
+     <string name="bluetooth_permission">No Bluetooth permission is obtained</string>
+     <string name="scan_end">Scan End</string>
+     <string name="connecting">Connecting</string>
+     <string name="under_development">Under development…</string>
+     <string name="bluetooth_switch">Bluetooth switch is not turned on</string>
+     <string name="other_devices_conncect">Other devices are connecting</string>
+
+     <string name="distribution_network_start">Wi-Fi information input successful, network configuration in progress</string>
+     <string name="distribution_network_success">Distribution network successful</string>
+     <string name="distribution_network_fail">Networking failed,the speaker is connecting to another WiFi.You can also re-enter the WiFi and password</string>
+
+     <string name="not_click_frequent">Please do not click too frequently</string>
+     <string name="open">Open</string>
+     <string name="close">Close</string>
+     <string name="not_supported">Not currently supported</string>
+
+     <string name="upgrade_notification_title">Speaker upgrade</string>
+     <string name="upgrade_notification_message">Speaker version download completed, please upgrade!</string>
+
+     <string name="ota_title">Software upgrade</string>
+     <string name="ota_address">Remote address</string>
+     <string name="upgrade_conditions">Upgrade conditions</string>
+     <string name="ota_attention">Please do not operate the speaker during the update</string>
+     <string name="check_network">Checking speaker distribution network</string>
+     <string name="check_battery">Checking speaker battery level</string>
+     <string name="ota_version">Version</string>
+     <string name="local_version">Local version</string>
+     <string name="latest_version">Latest version</string>
+     <string name="speaker_network_connected">The speaker has been networked</string>
+     <string name="speaker_network_disconnected">Speaker not connected to network</string>
+     <string name="battery_greater_than_15">Speaker battery level>15%</string>
+     <string name="battery_below_15">Speaker battery level below 15%</string>
+     <string name="obtain_failed">Failed to obtain</string>
+     <string name="not_allow_upgrade">Upgrade conditions not met</string>
+     <string name="consult_mail">Please consult %s</string>
+     <string name="already_latest_version">Already the latest version</string>
+     <string name="modify_remote_address">Modify remote address</string>
+     <string name="modify">modify</string>
+     <string name="edit_address">Please enter the remote address</string>
+     <string name="invalid_address">The address you entered is invalid</string>
+     <string name="checking_upgrade">Checking upgrade in progress</string>
+     <string name="download_progress">Downloading…%1$d%%</string>
+     <string name="upgrade_failed">Upgrade failed, please recheck and try again</string>
+     <string name="recheck">Recheck</string>
+     <string name="start_upgrade">Start Upgrade</string>
+     <string name="network_not_connected">Network not connected</string>
+     <string name="network_connected">Network connected</string>
+     <string name="speaker_upgrading_tip">The speaker software is updating. It will take about 1 minute and the connection will be disconnected soon!\n Please wait for the speaker to start up.</string>
+     <string name="email_content">Please provide a new remote address for software upgrade</string>
+     <string name="no_email_client">No email client available</string>
+</resources>

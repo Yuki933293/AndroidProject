@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFE1ECFF">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/meeting_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/state_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="60dp"
+        android:gravity="center"
+        android:paddingLeft="20dp"
+        android:paddingStart="20dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/status_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/status_tv"
+            tools:text="暂无文件生成，快去开会吧"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:textColor="#505660"
+            android:textSize="@dimen/font_size_18" />
+    </LinearLayout>
+
+</FrameLayout>

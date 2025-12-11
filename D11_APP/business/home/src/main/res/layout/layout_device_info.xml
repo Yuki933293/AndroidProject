@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@drawable/card_item_bg"
+    tools:ignore="MissingDefaultResource">
+
+    <ImageView
+        android:id="@+id/device_icon"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="22dp"
+        android:src="@drawable/ic_device_icon" />
+
+    <TextView
+        android:id="@+id/device_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="18dp"
+        android:layout_toLeftOf="@+id/llayout_battery"
+        android:layout_toRightOf="@id/device_icon"
+        android:ellipsize="middle"
+        android:gravity="center|left"
+        android:maxWidth="360dp"
+        android:maxLines="2"
+        android:text="音响的名字XXXXXX"
+        android:textColor="@color/black_light"
+        android:textSize="@dimen/font_size_18" />
+
+    <LinearLayout
+        android:id="@+id/llayout_battery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/battery_icon"
+            android:layout_width="29dp"
+            android:layout_height="17dp"
+            android:background="@drawable/ic_battery_percentage_100" />
+
+        <TextView
+            android:id="@+id/battery_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:gravity="center|left"
+            android:text="100%"
+            android:textColor="@color/black_battery"
+            android:textSize="@dimen/font_size_10" />
+
+    </LinearLayout>
+</RelativeLayout>

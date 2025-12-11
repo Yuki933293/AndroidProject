@@ -1,0 +1,12 @@
+<resources>
+    <string name="lib_name">blelib</string>
+    <string name="ota_error">更新设备%1$s失败，请检查蓝牙连接</string>
+    <string name="update_retry">重试</string>
+    <string name="update_cancel">取消</string>
+    <string name="updating">更新中,请稍后</string>
+    <string name="disconnect_toast">设备已断开连接，正在重新连接</string>
+    <string name="connect_toast">设备已连接</string>
+    <string name="connected">已连接</string>
+    <string name="disconnected">未连接</string>
+    <string name="connecte">连接</string>
+</resources>

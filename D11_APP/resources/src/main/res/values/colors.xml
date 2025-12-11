@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="grey_line">#FFE5E5E5</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="grey">#8c97a3</color>
+    <color name="grey_dark">#5B5D5E</color>
+    <color name="grey_bright">#FF494E5B</color>
+    <color name="grey_light">#E7ECF1</color>
+    <color name="green">#08D541</color>
+    <color name="blue_light">#FF369FEA</color>
+    <color name="blue_bar_bg">#FF2878FF</color>
+    <color name="brown_light">#FFD66161</color>
+    <color name="black_light">#FF1A1A1A</color>
+    <color name="blue_tint">#4D369FEA</color>
+    <color name="black_line">#80000000</color>
+    <color name="blue_water">#FFF4F9FF</color>
+    <color name="titlebar_color">#FFE2F0FF</color>
+    <color name="color_grey">#FFD8D8D8</color>
+    <color name="item_bg_color">#FFFFFFFF</color>
+    <color name="devide_line_bg_color">#FFC8C8C8</color>
+    <color name="grey_list_line_color">#FFDFDFDF</color>
+    <color name="tip_text_color">#62B7F4</color>
+    <color name="blue_aqua_color">#FF62B7F4</color>
+    <color name="light_grey">#ff787878</color>
+    <color name="green_light">#ff2caa32</color>
+    <color name="black_item_title">#3E3E3E</color>
+    <color name="black_item_tip">#FF767676</color>
+    <color name="blue_switch_on">#008CFF</color>
+    <color name="grey_switch_off">#FFD8D8D8</color>
+    <color name="grey_thumb_off">#FFACACAC</color>
+    <color name="blue_font_clear">#FF2878FF</color>
+    <color name="black_battery">#404040</color>
+    <color name="color_device_title">#FF3E3E3E</color>
+    <color name="color_device_titl1e">#FF6720</color>
+
+    <color name="ota_text_black_color">#ff3d3d3d</color>
+    <color name="ota_text_red_color">#FF2857</color>#
+</resources>

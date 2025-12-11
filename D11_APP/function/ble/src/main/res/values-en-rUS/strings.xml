@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+     <string name="lib_name">blelib</string>
+     <string name="ota_error">Failed to update device %1$s, please check the Bluetooth connection</string>
+     <string name="update_retry">Retry</string>
+     <string name="update_cancel">Cancel</string>
+     <string name="updating">Updating, please wait</string>
+     <string name="disconnect_toast">The device has been disconnected and is reconnecting</string>
+     <string name="connect_toast">Device connected</string>
+     <string name="connected">Connected</string>
+     <string name="disconnected">Disconnected</string>
+     <string name="connecte">Connect</string>
+</resources>

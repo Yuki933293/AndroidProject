@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.luxshare.home">
+
+    <uses-permission
+        android:name="android.permission.ACCESS_FINE_LOCATION"
+        tools:ignore="CoarseFineLocation" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+
+    <application>
+        <activity
+            android:name="com.luxshare.home.HomeActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize|screenLayout" />
+
+        <activity android:name=".activity.SettingActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize|screenLayout"
+           />
+
+        <activity android:name=".activity.DetailActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize|screenLayout"
+           />
+
+        <service android:name="com.luxshare.ble.BleService" />
+
+        <activity android:name=".activity.MeetingDetailActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize|screenLayout"/>
+    </application>
+
+</manifest>

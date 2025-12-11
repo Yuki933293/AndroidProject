@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LuxTitleBar">
+        <attr name="title" format="string" />
+        <attr name="rightKey" format="reference|color" />
+        <attr name="preTitle" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="ItemView">
+        <attr name="itemTitle" format="string" />
+        <attr name="tip" format="string" />
+        <attr name="itemType" format="string"/>
+        <attr name="item_bgType" format="enum">
+            <enum name="top" value="1" />
+            <enum name="middle" value="0" />
+            <enum name="bottom" value="-1" />
+        </attr>
+        <attr name="tipVisible" format="enum">
+            <enum name="visible" value="0" />
+            <enum name="invisible" value="1" />
+            <enum name="gone" value="2" />
+        </attr>
+
+        <attr name="describe" format="string" />
+        <attr name="describe_size" format="dimension" />
+        <attr name="describe_color" format="integer" />
+    </declare-styleable>
+
+</resources>
